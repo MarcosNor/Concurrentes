@@ -1,3 +1,12 @@
+/**
+ * DeterminanteConcurrente2
+ * Calculo del determinante con dos hilos en vez de seis.
+ * 
+ * @author Luis Gerardo Estrada García (319013832)
+ * @author Dulce Julieta Mora Hernández (319236448)
+ * @author Marcos Julián Noriega Rodríguez (319284061)
+ */
+
 public class DeterminanteConcurrente2 extends Thread{
     static int determinante;
     static int n_prueba = 3;
@@ -18,6 +27,9 @@ public class DeterminanteConcurrente2 extends Thread{
     
     public static int determinanteMatriz3x3(int matriz[][] , int n_prueba) {
         int result = 0;
+
+        //Cada hilo se encarga del calculo de tres diagonales de la matriz
+        // thr1 se encarga de las diagonales principales, mientras que thr2 de las restantes
         DeterminanteConcurrente2 thr1 = new DeterminanteConcurrente2(matriz[0][0], matriz[1][1], matriz[2][2], matriz[1][0], matriz[2][1], matriz[0][2], matriz[2][0], matriz[0][1], matriz[1][2]);
         DeterminanteConcurrente2 thr2 = new DeterminanteConcurrente2(matriz[2][0], matriz[1][1], matriz[0][2], matriz[1][0], matriz[0][1], matriz[2][2], matriz[0][0], matriz[2][1], matriz[1][2]);
     

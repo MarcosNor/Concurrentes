@@ -1,3 +1,11 @@
+/**
+ * DeterminanteConcurrente
+ * Programa usado en el laboratorio, el cual calcula el determinante de una matriz 3x3
+ * con 6 hilos extendiendo de thread.
+ * 
+ * @author Gilde Valeria Rodríguez Jiménez
+ */
+
 public class DeterminanteConcurrente extends Thread{
     static int determinante;
     static int n_prueba = 3;

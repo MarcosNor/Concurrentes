@@ -1,3 +1,14 @@
+/**
+ * DeterminanteConcurrenteRunnable
+ * Programa para calcular el determinante de una matriz, cambiando thread por la interfaz Runnable
+ * Se va acumulando el resultado cada vez que un hilo se ejecuta, 
+ * esto lo hacen a través de la variable compartida result
+ * 
+ * @author Luis Gerardo Estrada García (319013832)
+ * @author Dulce Julieta Mora Hernández (319236448)
+ * @author Marcos Julián Noriega Rodríguez (319284061)
+ */
+
 public class DeterminanteConcurrenteRunnable {
 
     static int matriz[][] = { { 1, 2, 2 }, { 1, 0, -2 }, { 3, -1, 1 }};
